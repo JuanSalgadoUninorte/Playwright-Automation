@@ -33,7 +33,7 @@ test('Limpiar el input de busqueda', async ({ page }) => {
   await expect(searchBox).toHaveAttribute('value', '');
 });
 
-test.only('Realizar una busqueda que genere al menos tenga un resultado', async ({ page }) => {
+test('Realizar una busqueda que genere al menos tenga un resultado', async ({ page }) => {
   await page.getByRole('button', { name: 'Search ' }).click();
 
   const searchBox = page.getByPlaceholder('Search docs');
